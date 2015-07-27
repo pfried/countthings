@@ -1,0 +1,8 @@
+.container
+  h1 {{ 'count.title' | translate }}
+
+  ul(ng-repeat="thing in count.things")
+    li {{ thing.name }}: {{ thing.points.length }}
+
+  div(image-drop, on-file="count.onNewFile(file)")
+    things-counter(image="count.image", current-category="count.currentCategory", things="count.things")
